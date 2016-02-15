@@ -37,9 +37,9 @@ example.controller('LineChartController', function($scope) {
 					"enter": {
 						"x": {"scale": "x", "field": "x"},
 						"y": {"scale": "y", "field": "y"},
-						"stroke": {"value": "#662d91"},
+						"stroke": {"value": "white"},
 						"fill": {"value": "#662d91"},
-						"size": {"value": 30}
+						"size": {"value": 50}
 					},
 					"hover": {
 					}
@@ -70,9 +70,9 @@ example.controller('LineChartController', function($scope) {
 					"enter": {
 						"x": {"scale": "x", "field": "x"},
 						"y": {"scale": "y", "field": "y"},
-						"stroke": {"value": "#58595b"},
+						"stroke": {"value": "white"},
 						"fill": {"value": "#58595b"},
-						"size": {"value": 30}
+						"size": {"value": 50}
 					},
 					"hover": {
 					}
@@ -127,7 +127,7 @@ example.controller('LineChartController', function($scope) {
 		{"x": 17, "y": 27}, {"x": 18, "y": 27},
 		{"x": 19, "y": 27}, {"x": 20, "y": 27},
 		{"x": 21, "y": 27}, {"x": 22, "y": 27},
-		{"x": 23, "y": 27}, {"x": 24, "y": 27}
+		{"x": 23, "y": 27}, {"x": 24, "y": 0}
 		],
 		table1: [
 		{"x": 0,  "y": 0},
@@ -142,7 +142,7 @@ example.controller('LineChartController', function($scope) {
 		{"x": 17, "y": 37}, {"x": 18, "y": 37},
 		{"x": 19, "y": 37}, {"x": 20, "y": 37},
 		{"x": 21, "y": 37}, {"x": 22, "y": 37},
-		{"x": 23, "y": 37}, {"x": 24, "y": 37}
+		{"x": 23, "y": 37}, {"x": 24, "y": 0}
 		]
 	};
 
