@@ -9,13 +9,12 @@ example.controller('LineChartController', function($scope) {
 		"padding": {"top": 10, "left": 30, "bottom": 30, "right": 10},
 		"data": [
 		  {"name": "table"},
-		  {"name": "table1"},
+		  {"name": "table1"}
 		],
 		"scales": [
 		{
 			"name": "x",
 			"range": "width",
-			"nice": true,
 			"domain": {"data": "table", "field": "x"}
 		},
 		{
@@ -32,7 +31,6 @@ example.controller('LineChartController', function($scope) {
 			{
 				"type": "symbol",
 				"from": {"data": "table"},
-				"key": "x",
 				"properties": {
 					"enter": {
 						"x": {"scale": "x", "field": "x"},
@@ -48,7 +46,6 @@ example.controller('LineChartController', function($scope) {
 			{
 				"type": "line",
 				"from": {"data": "table"},
-				"key": "x",
 				"properties": {
 					"enter": {
 						"x": {"scale": "x", "field": "x"},
@@ -62,6 +59,36 @@ example.controller('LineChartController', function($scope) {
 					}
 				}
 			},
+			/**{
+			          "type": "text",
+			          "from": {
+			            "transform": [{"type": "filter", "test": "datum.date == 1267430400000"}]
+			          },
+			          "properties": {
+			            "enter": {
+			              "x": {"scale": "x", "field": "date", "offset": 2},
+			              "y": {"scale": "y", "field": "y"},
+			              //"fill": {"scale": "color", "field": "symbol"},
+			              //"text": {"field": "symbol"},
+			              "baseline": {"value": "middle"}
+			            }
+			          }
+			}**/
+			/**{
+				"type": "text",
+				"from": {"data": "table"},
+				"properties": {
+					"enter": {
+						"x": {"scale": "x", "field": "date"},
+						"y": {"scale": "y", "field": "y"},
+						"stroke": {"value": "black"},
+						"fill": {"value": "#662d91"},
+						"size": {"value": 50}
+					},
+					"hover": {
+					}
+				}
+			}**/
 			{
 				"type": "symbol",
 				"from": {"data": "table1"},
@@ -95,20 +122,6 @@ example.controller('LineChartController', function($scope) {
 					}
 				}
 			}
-			/**{
-				"type": "text",
-				"from": {"data": "table"},
-				"key": "x",
-				"properties": {
-					"enter": {
-						"x": {"scale": "x", "field": "date"},
-						"y": {"scale": "y", "field": "y"},
-						"fill": {"scale": "x", "field": "date"},
-						"text": {"field": "date"},
-						"baseline": {"value": "middle"}
-					}
-				}
-			}**/
 		]
 	};
 
@@ -149,16 +162,16 @@ example.controller('LineChartController', function($scope) {
 
 	var data1 = {
 		table: [
-			{"date": "2016-01-01",  "y": 280}, {"date": "2016-01-02",  "y": 55},
-			{"date": "2016-01-03",  "y": 43}, {"date": "2016-01-04",  "y": 91},
-			{"date": "2016-01-05",  "y": 81}, {"date": "2016-01-06",  "y": 53},
-			{"date": "2016-01-07",  "y": 19}, {"date": "2016-01-08",  "y": 87},
-			{"date": "2016-01-09",  "y": 52}, {"date": "2016-01-10", "y": 48},
-			{"date": "2016-01-11", "y": 24}, {"date": "2016-01-12", "y": 49},
-			{"date": "2016-01-13", "y": 87}, {"date": "2016-01-14", "y": 66},
-			{"date": "2016-01-15", "y": 17}, {"date": "2016-01-16", "y": 27},
-			{"date": "2016-01-17", "y": 68}, {"date": "2016-01-18", "y": 16},
-			{"date": "2016-01-19", "y": 49}, {"date": "2016-01-20", "y": 15}
+			{"date": "Jan 1 2016",  "y": 0}, {"date": "Jan 2 2016",  "y": 55},
+			{"date": "Jan 3 2016",  "y": 43}, {"date": "Jan 4 2016",  "y": 91},
+			{"date": "Jan 5 2016",  "y": 81}, {"date": "Jan 6 2016",  "y": 53},
+			{"date": "Jan 7 2016",  "y": 19}, {"date": "Jan 8 2016",  "y": 87},
+			{"date": "Jan 9 2016",  "y": 52}, {"date": "Jan 10 2016", "y": 48},
+			{"date": "Jan 11 2016", "y": 24}, {"date": "Jan 12 2016", "y": 49},
+			{"date": "Jan 13 2016", "y": 87}, {"date": "Jan 14 2016", "y": 66},
+			{"date": "Jan 15 2016", "y": 17}, {"date": "Jan 16 2016", "y": 27},
+			{"date": "Jan 17 2016", "y": 68}, {"date": "Jan 18 2016", "y": 16},
+			{"date": "Jan 19 2016", "y": 49}, {"date": "Jan 20 2016", "y": 0}
 		]
 	};
 
